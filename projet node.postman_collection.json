@@ -1,0 +1,355 @@
+{
+	"info": {
+		"_postman_id": "795eabc0-91db-4971-8708-6180a4b1da9f",
+		"name": "projet node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "arthur@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Validate75",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				},
+				"description": "Enregistrement d'un utilisateur\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "arthur@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Validate75",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Login d'un user, prendre le token et le passer à toutes les requêtes suivantes"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/blocks",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjVjYzJjYWVjNTRlMmQ4MTkzMjIxZTgwYSIsImVtYWlsIjoiYXJ0aHVyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoic2hhMSRkOWY2MGNiZSQxJGNjNDFkNWUyN2U5ZDZjYjQ4NWQ2OWFlYmQwNWVkNjNkYThlOGI4MmYiLCJfX3YiOjB9LCJpYXQiOjE1NTYyODE4MDEsImV4cCI6MTU1ODg3MzgwMX0._8QAynEuuNPD-PVbSGtbJ03pRm7yCsF8iVvAKTujXyQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "hash",
+							"value": "0000000000000bae09a7a393a8acded75aa67e46cb81f7acaa5ad94f9eacd103",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/blocks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/blocks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjVjYzAyNDIxOGNjNTcyMGYyY2VmNjA0YSIsImVtYWlsIjoiYXJ0aHVyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoic2hhMSQ5ZWVjMTNlOSQxJGE4NDY2MDJiY2RmMWQ1MWExNDY4NDYyMjA3YjZhNzQ4ZjA4YzJiNjciLCJfX3YiOjB9LCJpYXQiOjE1NTYwOTYxMTgsImV4cCI6MTU1ODY4ODExOH0.yW3TbyZYW_BD-JoaIV9Q9FXh6tRe1Iz5VuQEbZGBhVU",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/blocks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/transactions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjVjYzAyZmZmZDIwMTY4MTU3MWVmYjM0OCIsImVtYWlsIjoiYXJ0aHVyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoic2hhMSQxMTE5Yjk4MSQxJDI1ZTM2N2QwZTRkMDFjMjJjMDAzZTExZGYyNDNlMGQ0NjVjNGQyODciLCJfX3YiOjB9LCJpYXQiOjE1NTYyNjg4MTAsImV4cCI6MTU1ODg2MDgxMH0.l8XavNCV8zEZ0aPZwFLWTWqSQGPxzvhjP3Agzo4DpMY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "hash",
+							"value": "6f553ade77f8e470997fc0cf4511634100a7294f150365bda470ecfaa3baaa56",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transactions"
+					]
+				},
+				"description": "get a tx by hash"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/transactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjVjYzAyNDIxOGNjNTcyMGYyY2VmNjA0YSIsImVtYWlsIjoiYXJ0aHVyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoic2hhMSQ5ZWVjMTNlOSQxJGE4NDY2MDJiY2RmMWQ1MWExNDY4NDYyMjA3YjZhNzQ4ZjA4YzJiNjciLCJfX3YiOjB9LCJpYXQiOjE1NTYwOTYxMTgsImV4cCI6MTU1ODY4ODExOH0.yW3TbyZYW_BD-JoaIV9Q9FXh6tRe1Iz5VuQEbZGBhVU",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transactions"
+					]
+				},
+				"description": "get all tx saved in db\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/latestBlock",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjVjYzAyNDIxOGNjNTcyMGYyY2VmNjA0YSIsImVtYWlsIjoiYXJ0aHVyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoic2hhMSQ5ZWVjMTNlOSQxJGE4NDY2MDJiY2RmMWQ1MWExNDY4NDYyMjA3YjZhNzQ4ZjA4YzJiNjciLCJfX3YiOjB9LCJpYXQiOjE1NTYwOTYxMTgsImV4cCI6MTU1ODY4ODExOH0.yW3TbyZYW_BD-JoaIV9Q9FXh6tRe1Iz5VuQEbZGBhVU",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/latestBlock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"latestBlock"
+					]
+				},
+				"description": "get last block"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/blocks/5cc2d81c475f8f20af1d8065",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjVjYzAyNDIxOGNjNTcyMGYyY2VmNjA0YSIsImVtYWlsIjoiYXJ0aHVyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoic2hhMSQ5ZWVjMTNlOSQxJGE4NDY2MDJiY2RmMWQ1MWExNDY4NDYyMjA3YjZhNzQ4ZjA4YzJiNjciLCJfX3YiOjB9LCJpYXQiOjE1NTYwOTYxMTgsImV4cCI6MTU1ODY4ODExOH0.yW3TbyZYW_BD-JoaIV9Q9FXh6tRe1Iz5VuQEbZGBhVU",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/blocks/5cc2d81c475f8f20af1d8065",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blocks",
+						"5cc2d81c475f8f20af1d8065"
+					]
+				},
+				"description": "delete a block (db id in url)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/btcConvert/eur/50000",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjVjYzAyNDIxOGNjNTcyMGYyY2VmNjA0YSIsImVtYWlsIjoiYXJ0aHVyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoic2hhMSQ5ZWVjMTNlOSQxJGE4NDY2MDJiY2RmMWQ1MWExNDY4NDYyMjA3YjZhNzQ4ZjA4YzJiNjciLCJfX3YiOjB9LCJpYXQiOjE1NTYwOTYxMTgsImV4cCI6MTU1ODY4ODExOH0.yW3TbyZYW_BD-JoaIV9Q9FXh6tRe1Iz5VuQEbZGBhVU",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/btcConvert/eur/50000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"btcConvert",
+						"eur",
+						"50000"
+					]
+				},
+				"description": "in the url, put your ticker and the amount you want to convert to btc, at the current price"
+			},
+			"response": []
+		}
+	]
+}
